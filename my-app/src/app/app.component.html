@@ -1,0 +1,22 @@
+<div style="text-align:center">
+  <nav>
+    <a routerLink="/departments">Departments</a>
+    <a routerLink="/employees">Employees</a>
+  </nav>
+  
+  <h1>{{message}}</h1>
+  <!-- <app-test></app-test>
+  <app-test2></app-test2> -->
+  <app-struc-directives></app-struc-directives>
+  <app-component-interactions (childEvent)="message=$event" [parentData]="name"></app-component-interactions> 
+  <!-- this means that the parents message property is updated with the events payload -->
+   <app-pipes></app-pipes>
+   <app-services></app-services>
+   <app-employee-list></app-employee-list>
+</div>
+<app-employee-detail>
+  <p #projectedContent>This content is for the child</p>
+</app-employee-detail>
+<app-header></app-header>
+
+<router-outlet></router-outlet>
